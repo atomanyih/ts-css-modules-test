@@ -4,12 +4,18 @@ import './App.css';
 import styles from './Test.module.scss';
 import cx from 'classnames'
 
+const someFunction = (className: string): string => {
+  return className
+}
+
 function App() {
+  const className = someFunction(styles.test);
+
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p className={cx({[styles.test]: true})}>
+        <p className={className}>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
         <a
